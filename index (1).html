@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#1b2433">
+  <title>Урод</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud">
+    <div>Счёт <b id="hScore">0</b></div>
+    <div>Рекорд <b id="hBest">0</b></div>
+    <div>Бутылки <b id="hBottles">0</b></div>
+    <button id="soundBtn" type="button" aria-label="Звук">🔊</button>
+  </div>
+
+  <div id="controls">
+    <div class="col">
+      <button id="bGas" type="button">ГАЗ</button>
+      <button id="bBrake" type="button">ТОРМОЗ</button>
+    </div>
+    <div class="col">
+      <button id="bJump" type="button">ПРЫЖОК</button>
+      <button id="bWheelie" type="button">ВИЛИ</button>
+    </div>
+  </div>
+
+  <section class="ov" id="startOv">
+    <h1 class="logo">Урод</h1>
+    <p class="sub">Школьник на питбайке</p>
+    <p class="wallet-line">Бутылки «ГАЗЯВА»: <b class="wallet">0</b></p>
+    <button class="big" id="playBtn" type="button">Играть</button>
+    <button class="big alt" id="shopBtn1" type="button">Магазин</button>
+  </section>
+
+  <section class="ov hidden" id="overOv">
+    <h1 class="logo small">Урод</h1>
+    <p class="sub">Игра окончена</p>
+    <p>Счёт: <b id="fScore">0</b> · Рекорд: <b id="fBest">0</b></p>
+    <p id="newRec" class="rec hidden">Новый рекорд!</p>
+    <p class="wallet-line">Бутылки: <b class="wallet">0</b></p>
+    <button class="big" id="retryBtn" type="button">Заново</button>
+    <button class="big alt" id="shopBtn2" type="button">Магазин</button>
+  </section>
+
+  <section class="ov hidden" id="shopOv">
+    <h2>Магазин</h2>
+    <p class="wallet-line">Бутылки: <b class="wallet">0</b></p>
+    <div id="skinList"></div>
+    <button class="big alt" id="closeShop" type="button">Назад</button>
+  </section>
+
+  <section class="ov hidden" id="pauseOv">
+    <h2>Пауза</h2>
+    <p>Нажми, чтобы продолжить</p>
+  </section>
+
+  <script src="game.js"></script>
+</body>
+</html>
